@@ -25,7 +25,7 @@ class MyApp extends PolymerElement {
     return html`
       <style>
         :host {
-          --app-primary-color: #4285f4;
+          --app-box-shadow: #4285f4;
           --app-secondary-color: black;
 
           display: block;
@@ -37,11 +37,7 @@ class MyApp extends PolymerElement {
 
         app-header {
           color: #fff;
-          background-color: var(--app-primary-color);
-        }
-
-        app-header paper-icon-button {
-          --paper-icon-button-ink-color: white;
+          margin-left: 18px;
         }
 
         #main-title {
@@ -63,7 +59,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="" id="main-title">Books List</div>
+              <img src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg" alt="Bibliotech logo">
             </app-toolbar>
           </app-header>
 
