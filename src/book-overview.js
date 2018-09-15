@@ -117,8 +117,8 @@ class BookOverview extends PolymerElement {
     }
   }
 
-  handleClick(e) {
-    console.log(e);
+  handleClick() {
+    window.location = `https://bibliotech.education/#/view/books/${this.isbn}/epub/html/toc.html`;
   }
 }
 
