@@ -64,7 +64,7 @@ class MyApp extends PolymerElement {
           </app-header>
 
           <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
-            <book-overview name="bookOverview" isbn="pg1017"></book-overview>
+            <books-list name="booksList"></books-list>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
@@ -94,10 +94,10 @@ class MyApp extends PolymerElement {
      // Show the corresponding page according to the route.
      //
      // If no page was found in the route data, page will be an empty string.
-     // Show 'bookOverview' in that case. And if the page doesn't exist, show 'view404'.
+     // Show 'booksList' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
-      this.page = 'bookOverview';
-    } else if (['bookOverview'].indexOf(page) !== -1) {
+      this.page = 'booksList';
+    } else if (['booksList'].indexOf(page) !== -1) {
       this.page = page;
     } else {
       this.page = 'view404';
@@ -110,8 +110,8 @@ class MyApp extends PolymerElement {
     // Note: `polymer build` doesn't like string concatenation in the import
     // statement, so break it up.
     switch (page) {
-      case 'bookOverview':
-        import('./book-overview.js');
+      case 'booksList':
+        import('./books-list.js');
         break;
       case 'view404':
         import('./my-view404.js');

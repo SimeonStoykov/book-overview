@@ -8,7 +8,7 @@ class BookOverview extends PolymerElement {
     return html`
       <style include="shared-styles">
         :host {
-          display: block;
+          display: inline-block;
           padding: 10px;
         }
 
@@ -115,10 +115,6 @@ class BookOverview extends PolymerElement {
         type: String
       }
     }
-  }
-
-  constructor() {
-    super();
   }
 
   handleClick(e) {
